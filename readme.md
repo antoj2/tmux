@@ -31,7 +31,7 @@ set -g @plugin 'tmux-plugins/tpm'
 3. Set your preferred variant:
 
 ```bash
-set -g @rose_pine_variant 'main' # Options are 'main', 'moon' or 'dawn'
+set -g @rose_pine_variant 'main' # Options are 'main', 'moon', 'dawn' or 'mellow'
 ```
 <br>
 
