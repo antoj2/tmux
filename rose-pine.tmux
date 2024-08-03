@@ -102,6 +102,24 @@ main() {
         thm_hl_med="#44415a";
         thm_hl_high="#56526e";
 
+    elif [[ $theme == mellow ]]; then
+
+        thm_base="#1b1b1d";
+        thm_surface="#2a273f";
+        thm_overlay="#393552";
+        thm_muted="#6e6a86";
+        thm_subtle="#908caa";
+        thm_text="#e0def4";
+        thm_love="#eb6f92";
+        thm_gold="#f6c177";
+        thm_rose="#ea9a97";
+        thm_pine="#3e8fb0";
+        thm_foam="#eb6f92";
+        thm_iris="#ea83a5";
+        thm_hl_low="#2a283e";
+        thm_hl_med="#44415a";
+        thm_hl_high="#56526e";
+
     fi
 
     # Aggregating all commands into a single array
