@@ -7,7 +7,9 @@
 # Inspired by dracula/tmux, catppucin/tmux & challenger-deep-theme/tmux
 #
 #
-export TMUX_ROSEPINE_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
+#
+# slightly modified by me to fit my needs and add mellow variant
+export TMUX_ROSEPINE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 get_tmux_option() {
     local option value default
@@ -40,7 +42,6 @@ unset_option() {
     tmux_commands+=(set-option -gu "$option" ";")
 }
 
-
 main() {
     local theme
     theme="$(get_tmux_option "@rose_pine_variant" "")"
@@ -50,75 +51,75 @@ main() {
     # or in the plugin's features
     if [[ $theme == main ]]; then
 
-        thm_base="#191724";
-        thm_surface="#1f1d2e";
-        thm_overlay="#26233a";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ebbcba";
-        thm_pine="#31748f";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#21202e";
-        thm_hl_med="#403d52";
-        thm_hl_high="#524f67";
+        thm_base="#191724"
+        thm_surface="#1f1d2e"
+        thm_overlay="#26233a"
+        thm_muted="#6e6a86"
+        thm_subtle="#908caa"
+        thm_text="#e0def4"
+        thm_love="#eb6f92"
+        thm_gold="#f6c177"
+        thm_rose="#ebbcba"
+        thm_pine="#31748f"
+        thm_foam="#9ccfd8"
+        thm_iris="#c4a7e7"
+        thm_hl_low="#21202e"
+        thm_hl_med="#403d52"
+        thm_hl_high="#524f67"
 
     elif [[ $theme == dawn ]]; then
 
-        thm_base="#faf4ed";
-        thm_surface="#fffaf3";
-        thm_overlay="#f2e9e1";
-        thm_muted="#9893a5";
-        thm_subtle="#797593";
-        thm_text="#575279";
-        thm_love="#b4367a";
-        thm_gold="#ea9d34";
-        thm_rose="#d7827e";
-        thm_pine="#286983";
-        thm_foam="#56949f";
-        thm_iris="#907aa9";
-        thm_hl_low="#f4ede8";
-        thm_hl_med="#dfdad9";
-        thm_hl_high="#cecacd";
+        thm_base="#faf4ed"
+        thm_surface="#fffaf3"
+        thm_overlay="#f2e9e1"
+        thm_muted="#9893a5"
+        thm_subtle="#797593"
+        thm_text="#575279"
+        thm_love="#b4367a"
+        thm_gold="#ea9d34"
+        thm_rose="#d7827e"
+        thm_pine="#286983"
+        thm_foam="#56949f"
+        thm_iris="#907aa9"
+        thm_hl_low="#f4ede8"
+        thm_hl_med="#dfdad9"
+        thm_hl_high="#cecacd"
 
     elif [[ $theme == moon ]]; then
 
-        thm_base="#232136";
-        thm_surface="#2a273f";
-        thm_overlay="#393552";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ea9a97";
-        thm_pine="#3e8fb0";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#2a283e";
-        thm_hl_med="#44415a";
-        thm_hl_high="#56526e";
+        thm_base="#232136"
+        thm_surface="#2a273f"
+        thm_overlay="#393552"
+        thm_muted="#6e6a86"
+        thm_subtle="#908caa"
+        thm_text="#e0def4"
+        thm_love="#eb6f92"
+        thm_gold="#f6c177"
+        thm_rose="#ea9a97"
+        thm_pine="#3e8fb0"
+        thm_foam="#9ccfd8"
+        thm_iris="#c4a7e7"
+        thm_hl_low="#2a283e"
+        thm_hl_med="#44415a"
+        thm_hl_high="#56526e"
 
     elif [[ $theme == mellow ]]; then
 
-        thm_base="#1b1b1d";
-        thm_surface="#2a273f";
-        thm_overlay="#393552";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ea9a97";
-        thm_pine="#3e8fb0";
-        thm_foam="#eb6f92";
-        thm_iris="#ea83a5";
-        thm_hl_low="#2a283e";
-        thm_hl_med="#44415a";
-        thm_hl_high="#56526e";
+        thm_base="#1b1b1d"
+        thm_surface="#2a273f"
+        thm_overlay="#393552"
+        thm_muted="#6e6a86"
+        thm_subtle="#908caa"
+        thm_text="#e0def4"
+        thm_love="#eb6f92"
+        thm_gold="#f6c177"
+        thm_rose="#ea9a97"
+        thm_pine="#3e8fb0"
+        thm_foam="#eb6f92"
+        thm_iris="#ea83a5"
+        thm_hl_low="#2a283e"
+        thm_hl_med="#44415a"
+        thm_hl_high="#56526e"
 
     fi
 
@@ -133,7 +134,6 @@ main() {
     # set status-justify "left"
     set status-left-length "200"
     set status-right-length "200"
-
 
     # Theoretically messages (need to figure out color placement)
     set message-style "fg=$thm_muted,bg=$thm_base"
@@ -183,9 +183,9 @@ main() {
     window_directory="$(get_tmux_option "@rose_pine_show_pane_directory" "")"
     readonly window_directory
 
-    local window_separator 
+    local window_separator
     window_separator="$(get_tmux_option "@rose_pine_window_separator" "")"
-    readonly window_separator 
+    readonly window_separator
 
     local default_window_behavior
     default_window_behavior="$(get_tmux_option "@rose_pine_default_window_behavior" "")"
@@ -286,7 +286,7 @@ main() {
 
     local field_separator
     # NOTE: Don't remove
-    field_separator="$(get_tmux_option "@rose_pine_field_separator" " | " )"
+    field_separator="$(get_tmux_option "@rose_pine_field_separator" " | ")"
 
     # END
 
@@ -371,7 +371,7 @@ main() {
     fi
 
     # Window appearence switcher: 3 options for the user
-    if [[ "$window_separator" != "" ]] ; then
+    if [[ "$window_separator" != "" ]]; then
         window_status_format=$custom_window_sep
         window_status_current_format=$custom_window_sep_current
         setw window-status-format "$window_status_format"
@@ -418,7 +418,10 @@ main() {
     else
         left_column=$show_session$show_window
     fi
-    #
+
+    # display a tiny magnifying glass in the left corner if the window is zoomed (prefix+z)
+    left_column=#{?window_zoomed_flag,🔍,}$left_column
+
     # Appending / Prepending custom user sections to
     if [[ "$status_left_prepend_section" != "" ]]; then
         left_column=$status_left_prepend_section$left_column
@@ -467,7 +470,6 @@ main() {
         set status-left ""
         set status-right ""
     fi
-
 
     # NOTE: Dont remove this, it can be useful for references
     # setw window-status-format "$window_status_format"
